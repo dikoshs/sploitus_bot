@@ -48,11 +48,12 @@ class ApiHandler:
         return my_vulns
 
     def get_all_vuln_by_id(self, id):
+        # print("QWEQWEWQEEQWE: ", id)
         response = requests.get(self.API_URL + f"get_vulnerabilities/{id}", headers={
             "Authorization": f"APIKEY {self.API_KEY}",
         })
 
         my_vulns = response.json()
-        print("FFFFFFF:", my_vulns)
+        # print("FFFFFFF:", my_vulns)
 
         return my_vulns
